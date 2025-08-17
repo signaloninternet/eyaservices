@@ -18,10 +18,10 @@ export default function Footer() {
             {/* Left Side - Company Info */}
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Designure
+                eya services
               </h3>
               <p className="text-gray-600 mb-6 leading-relaxed max-w-md">
-                Ready to elevate your online presence? Contact us today to discuss your project and discover how we can bring your vision to life.
+                Your trusted partner in health and wellness, delivering essential medical supplies with care and reliability.
               </p>
               
               {/* Made with love section */}
@@ -29,7 +29,7 @@ export default function Footer() {
                 <div className="w-4 h-4 border border-gray-400 rounded-full flex items-center justify-center">
                   <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
                 </div>
-                <span>Made with love powered by Cyberflux</span>
+                <span>Powered by oceanwaveweb.com</span>
               </div>
             </div>
 

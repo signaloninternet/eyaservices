@@ -1,17 +1,37 @@
 "use client";
 
-import { Star, Settings, MessageSquare, Award, Square } from "lucide-react";
+import {
+  Star,
+  Settings,
+  MessageSquare,
+  Award,
+  Square,
+  ShieldCheckIcon,
+  Clock12Icon,
+  Clock,
+  Users,
+  MapPinCheck,
+  LucideHeartPulse,
+  LucideHeadphones,
+  HeadphonesIcon,
+  Headphones,
+  PhoneIncomingIcon,
+} from "lucide-react";
 import Image from "next/image";
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-20">
+    <section className="py-20 mt-8 relative">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-left mb-16">
           <h2 className="text-4xl md:text-5xl text-black mb-4">
-            Why Choose Us?
+            Why Choose EYA Services?
           </h2>
+          <p className="text-gray-600 text-lg">
+            We’re more than just a supplier – we’re your trusted partner in
+            health and wellness.
+          </p>
         </div>
 
         {/* Bento Grid */}
@@ -25,72 +45,68 @@ export default function WhyChooseUs() {
         >
           {/* Card 1 */}
           <div
-            className="bg-white p-8 rounded-2xl shadow-sm flex flex-col   transition-all duration-300"
+            className="bg-[#18a08e] p-8 rounded-2xl shadow-sm flex flex-col   transition-all duration-300"
             style={{ gridColumn: "span 2", gridRow: "span 1" }}
           >
             <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
-              <Image width={24} height={24} src="/one.svg" alt="Star Icon" />
+              <ShieldCheckIcon className="w-6 h-6 text-black" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              Easy-to-Use Design Tools.
+            <h3 className="text-xl font-semibold text-white mb-4">
+              Trusted & Reliable
             </h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Our intuitive design platform is built for creators of all skill
-              levels. Whether you’re a beginner or an experienced designer, you
-              can bring your vision to life with ease.
+            <p className="text-gray-100 text-sm leading-relaxed">
+              Licensed medical supply distributor with quality guarantees on all
+              products.
             </p>
           </div>
 
           {/* Card 2 */}
           <div
-            className="bg-white p-8 rounded-2xl shadow-sm flex flex-col   transition-all duration-300"
+            className="bg-[#18a08e] p-8 rounded-2xl shadow-sm flex flex-col   transition-all duration-300"
             style={{ gridColumn: "span 2", gridRow: "span 1" }}
           >
             <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
-              <Image width={24} height={24} src="/five.png" alt="Star Icon" />
+              <Clock className="w-6 h-6 text-black" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              End-to-End Manufacturing.
+            <h3 className="text-xl font-semibold text-white mb-4">
+              Fast Delivery
             </h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              With Designure, you don’t just design – you manufacture. We handle
-              the production process for you, ensuring your designs become
-              reality.
+            <p className="text-gray-100 text-sm leading-relaxed">
+              Same-day delivery available. Most orders delivered within 2–4
+              hours.
             </p>
           </div>
 
           {/* Card 3 */}
           <div
-            className="bg-white p-8 rounded-2xl shadow-sm flex flex-col   transition-all duration-300"
+            className="bg-[#18a08e] p-8 rounded-2xl shadow-sm flex flex-col   transition-all duration-300"
             style={{ gridColumn: "span 2", gridRow: "span 1" }}
           >
             <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
-               <Image width={24} height={24} src="/four.png" alt="Star Icon" />
+              <Users className="w-6 h-6 text-black" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              Build Your Brand.
+            <h3 className="text-xl font-semibold text-white mb-4">
+              Community Focused
             </h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Customize packaging, labels, and more to create a unique brand
-              experience for your customers. Launch and grow your fashion brand
-              from anywhere in the world.
+            <p className="text-gray-100 text-sm leading-relaxed">
+              Proudly serving local families and businesses for over 5 years.
             </p>
           </div>
 
           {/* Card 4 - Tall with image */}
           <div
-            className="bg-white p-8 rounded-2xl shadow-sm flex flex-col   transition-all duration-300"
+            className="bg-[#18a08e] p-8 rounded-2xl shadow-sm flex flex-col   transition-all duration-300"
             style={{ gridColumn: "span 2", gridRow: "span 2" }}
           >
             <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
-              <Image width={24} height={24} src="/three.png" alt="Star Icon" />
+              <LucideHeartPulse className="w-6 h-6 text-black" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              Top Quality, Best Prices.
+            <h3 className="text-xl font-semibold text-white mb-4">
+              Serving Healthcare Professionals & Families
             </h3>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              We offer competitive manufacturing prices without compromising on
-              quality, making it easier for you to scale your fashion business.
+            <p className="text-gray-100 text-sm leading-relaxed mb-4">
+              From individual families to healthcare facilities, we provide the
+              medical supplies you need with the personal service you deserve.
             </p>
             <div className="w-full h-1/2 mt-auto rounded-xl overflow-hidden">
               <img
@@ -103,35 +119,34 @@ export default function WhyChooseUs() {
 
           {/* Card 5 */}
           <div
-            className="bg-white p-8 rounded-2xl shadow-sm flex flex-col   transition-all duration-300"
+            className="bg-[#18a08e] p-8 rounded-2xl shadow-sm flex flex-col   transition-all duration-300"
             style={{ gridColumn: "span 3", gridRow: "span 1" }}
           >
             <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
-              <MessageSquare className="w-6 h-6" />
+              <MapPinCheck className="w-6 h-6 text-black" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              Lorem ipsum
+            <h3 className="text-xl font-semibold text-white mb-4">
+              Local Service
             </h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              From concept to launch, we create stunning, user-centric websites
-              that elevate your brand and engage your audience.
+            <p className="text-gray-100 text-sm leading-relaxed">
+              Serving the entire metro area with personalized, caring service.
             </p>
           </div>
 
           {/* Card 6 */}
           <div
-            className="bg-white p-8 rounded-2xl shadow-sm flex flex-col   transition-all duration-300"
+            className="bg-[#18a08e] p-8 rounded-2xl shadow-sm flex flex-col   transition-all duration-300"
             style={{ gridColumn: "span 3", gridRow: "span 1" }}
           >
             <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
-              <Image width={24} height={24} src="/two.png" alt="Star Icon" />
+               <PhoneIncomingIcon className="w-6 h-6 text-black" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              Custom Development
+            <h3 className="text-xl font-semibold text-white mb-4">
+              24/7 Emergency Support
             </h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              From concept to launch, we create stunning, user-centric websites
-              that elevate your brand and engage your audience.
+            <p className="text-gray-100 text-sm leading-relaxed">
+              Our team is always available for urgent orders and emergencies,
+              ensuring you never face delays in critical times.
             </p>
           </div>
         </div>

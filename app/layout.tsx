@@ -4,8 +4,8 @@ import { Instrument_Serif } from 'next/font/google';
 
 
 export const metadata: Metadata = {
-  title: 'Designure - Create Your Dream Fashion Line',
-  description: 'Create your dream fashion line, anytime, anywhere with Designure. Professional design tools and end-to-end manufacturing solutions.',
+  title: 'eya services - Create Your Dream Fashion Line',
+  description: 'Create your dream fashion line, anytime, anywhere with eya services. Professional design tools and end-to-end manufacturing solutions.',
 };
 
 export default function RootLayout({

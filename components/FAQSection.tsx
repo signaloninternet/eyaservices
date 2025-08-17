@@ -5,31 +5,42 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
-    question: "How can I contact Designure?",
+    question: "What products does Eya Services offer?",
     answer:
-      "You can reach us through our contact form on our website or by emailing us at hello@Designure.com. We typically respond within 24 hours.",
+      "We provide a wide range of essential health products, including emergency kits, adult pampers, Ensure milk, medical gloves, sanitizing wipes, underpads, and wheelchairs. All products are carefully sourced to ensure quality and reliability.",
   },
   {
-    question: "What services do you offer?",
+    question: "Do you offer same-day delivery?",
     answer:
-      "We offer comprehensive fashion design and manufacturing services, including design consultation, pattern making, sample creation, bulk production, and brand packaging solutions.",
+      "Yes! All our products are available for same-day delivery, subject to availability and order time. Please place your order early in the day to ensure prompt delivery.",
   },
   {
-    question: "Do you provide website maintenance services?",
+    question: "How can I place an order with Eya Services?",
     answer:
-      "Yes, we provide ongoing website maintenance services including updates, security monitoring, performance optimization, and technical support to ensure your site runs smoothly.",
+      "You can place an order through our website or by contacting us directly via phone or email. Our team is always ready to assist you in selecting the right health products for your needs.",
   },
   {
-    question: "How long does it take to design and develop a website?",
+    question: "Do you sell in bulk or only for individuals?",
     answer:
-      "The timeline varies depending on project complexity. A basic website typically takes 2-4 weeks, while more complex projects may take 6-12 weeks. We'll provide a detailed timeline during our initial consultation.",
+      "We cater to both individual and bulk orders. Whether you need supplies for personal use, healthcare facilities, or businesses, Eya Services can accommodate your requirements.",
   },
   {
-    question: "Do you require a deposit for projects?",
+    question: "What payment methods do you accept?",
     answer:
-      "Yes, we typically require a 50% deposit to begin work on your project. The remaining balance is due upon project completion. We accept various payment methods for your convenience.",
+      "We accept multiple payment methods, including credit/debit cards, bank transfers, and secure online payment options. Please contact us if you have specific payment needs.",
+  },
+  {
+    question: "Can I get a custom solution for my healthcare needs?",
+    answer:
+      "Absolutely. If you have specific requirements, our team will work with you to provide tailored health supply solutions that fit your needs.",
+  },
+  {
+    question: "How can I contact Eya Services?",
+    answer:
+      "You can reach us by phone at 786-343-6772 or by email at elbardezgarcia@gmail.com. Alternatively, you can fill out the contact form on our website, and we’ll get back to you within 24 hours.",
   },
 ];
+
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -59,7 +70,7 @@ export default function FAQSection() {
           </div>
 
           {/* Right Side - FAQ Items */}
-          <div className="space-y-4 z-20">
+          <div className="space-y-4 font-creato z-20">
             {faqs.map((faq, index) => (
               <div
                 key={index}
@@ -86,15 +97,6 @@ export default function FAQSection() {
                     <div className="border-t border-gray-100 pt-6">
                       <p className="text-gray-600 leading-relaxed">
                         {faq.answer}
-                        {index === 0 && (
-                          <>
-                            <br />
-                            <strong className="text-gray-900">
-                              hello@Designure.com
-                            </strong>{" "}
-                            We typically respond within 24 hours.
-                          </>
-                        )}
                       </p>
                     </div>
                   </div>

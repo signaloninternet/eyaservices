@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,18 +27,24 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="fixed top-4 left-0 right-0 z-50 transition-all duration-300">
+    <header className="fixed font-creato top-4 left-0 right-0 z-50 transition-all duration-300">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo - hidden when scrolled */}
           <div
             className={`flex-shrink-0 transition-all duration-300 ${
-              scrolled
-                ? "opacity-0 w-0 overflow-hidden"
-                : "opacity-100 w-auto"
+              scrolled ? "opacity-0 w-0 overflow-hidden" : "opacity-100 w-auto"
             }`}
           >
-            <h1 className="text-2xl font-bold text-gray-900">Designure</h1>
+            <Link href="/">
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={150}
+                height={50}
+                className="h-12 md:h-16 w-auto"
+              />
+            </Link>
           </div>
 
           {/* Nav Links */}
@@ -76,12 +84,10 @@ export default function Header() {
           {/* Waitlist Button - hidden when scrolled */}
           <div
             className={`hidden md:block transition-all duration-300 ${
-              scrolled
-                ? "opacity-0 w-0 overflow-hidden"
-                : "opacity-100 w-auto"
+              scrolled ? "opacity-0 w-0 overflow-hidden" : "opacity-100 w-auto"
             }`}
           >
-            <Button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-4 rounded-xl transition-all duration-300">
+            <Button className="bg-[#18a08e] hover:bg-purple-700 text-white px-6 py-4 rounded-xl transition-all duration-300">
               Join the waitlist
             </Button>
           </div>
