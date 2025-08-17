@@ -6,9 +6,9 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative max-w-[1600px] mt-[80px] mx-auto h-[1000px] md:h-[650px] gap-6 flex flex-col-reverse md:flex-row items-stretch">
+    <section className="relative max-w-[1600px] mt-[80px] mx-auto h-auto md:h-[650px] gap-6 flex flex-col-reverse md:flex-row items-stretch">
       {/* Left Side Image */}
-      <div className="relative w-full rounded-3xl md:ml-4 md:w-1/2 h-1/2 md:h-full">
+      <div className="relative w-full rounded-3xl min-h-[400px] md:ml-4 md:w-1/2 h-1/2 md:h-full">
         <Image
           src="https://images.pexels.com/photos/5214958/pexels-photo-5214958.jpeg" // replace with your healthcare/abstract medical illustration
           alt="Healthcare abstract design"
@@ -19,7 +19,7 @@ export default function HeroSection() {
       </div>
 
       {/* Right Side Content */}
-      <div className="relative w-full md:mr-4 rounded-3xl md:w-1/2 h-1/2 md:h-full bg-gradient-to-br from-gray-900 via-[#225867] to-black p-10 lg:p-16 flex flex-col items-start justify-center text-white">
+      <div className="relative w-full md:mr-4 rounded-3xl md:w-1/2 h-1/2 md:h-full bg-gradient-to-br from-gray-900 via-[#225867] to-black px-6 py-10 lg:p-16 flex flex-col items-start justify-center text-white">
         <h1 className="relative text-3xl lg:text-5xl font-bold z-10">
           Your Health, Our Priority <br />
           <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
