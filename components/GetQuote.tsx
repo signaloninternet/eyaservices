@@ -114,7 +114,7 @@ export default function GetQuote() {
 
         {/* Right Side - Quote Form with Glassmorphic Effect */}
         <div className="relative z-20 font-creato">
-          <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-2xl">
+          <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl sm:rounded-3xl p-2 md:p-8 shadow-2xl">
             <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg">
               <div className="space-y-6">
                 <div className="text-center">
