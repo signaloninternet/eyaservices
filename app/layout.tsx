@@ -4,8 +4,8 @@ import { Instrument_Serif } from 'next/font/google';
 
 
 export const metadata: Metadata = {
-  title: 'eya services - Create Your Dream Fashion Line',
-  description: 'Create your dream fashion line, anytime, anywhere with eya services. Professional design tools and end-to-end manufacturing solutions.',
+  title: 'eya services - order your health supplies',
+  description: 'Eya Services is your trusted partner in health and wellness, delivering essential medical supplies with care and reliability.',
 };
 
 export default function RootLayout({
