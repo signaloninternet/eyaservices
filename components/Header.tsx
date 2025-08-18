@@ -126,6 +126,14 @@ export default function Header() {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-white flex flex-col items-center justify-center space-y-6 shadow-lg">
+            {/* X (Close) Button */}
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="absolute top-6 right-6 text-gray-700 hover:text-purple-600 transition"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
             <button
               onClick={() => handleScroll("home")}
               className="text-lg font-medium text-gray-900 hover:text-purple-600 transition"
@@ -138,7 +146,6 @@ export default function Header() {
             >
               Why Choose Us ?
             </button>
-
             <button
               onClick={() => handleScroll("products")}
               className="text-lg text-gray-600 hover:text-purple-600 transition"
