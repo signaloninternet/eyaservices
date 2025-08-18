@@ -1,8 +1,17 @@
-'use client';
+"use client";
 
 import { Instagram, Linkedin, Music, Globe } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
+  const handleScroll = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="relative overflow-hidden">
       {/* Background Pattern */}
@@ -12,67 +21,99 @@ export default function Footer() {
         <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-pink-300 rounded-full blur-lg"></div>
       </div>
 
-      <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
-        <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 md:p-12">
+      <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-32 md:py-16 relative z-10">
+        <Link
+          href="https://oceanwaveweb.com/"
+          target="_blank"
+          className="absolute hidden md:block bottom-[4px] left-[40%] z-10"
+        >
+          <Image
+            src="/logolight.png"
+            alt="Heart Icon"
+            width={200}
+            height={200}
+          />
+        </Link>
+
+        <Link
+          href="https://oceanwaveweb.com/"
+          target="_blank"
+          className="absolute md:hidden bottom-[6px] left-[24%] z-10"
+        >
+          <Image
+            src="/logolight.png"
+            alt="Heart Icon"
+            width={170}
+            height={170}
+          />
+        </Link>
+
+        <div className="bg-white/90 relative backdrop-blur-sm rounded-3xl p-8 md:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left Side - Company Info */}
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                eya services
-              </h3>
+              <Image src="/logo.png" alt="Logo" width={150} height={50} />
               <p className="text-gray-600 mb-6 leading-relaxed max-w-md">
-                Your trusted partner in health and wellness, delivering essential medical supplies with care and reliability.
+                Your trusted partner in health and wellness, delivering
+                essential medical supplies with care and reliability.
               </p>
-              
+
               {/* Made with love section */}
-              <div className="flex items-center space-x-2 text-sm text-gray-500">
-                <div className="w-4 h-4 border border-gray-400 rounded-full flex items-center justify-center">
-                  <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-                </div>
-                <span>Powered by oceanwaveweb.com</span>
-              </div>
+              <div className="flex relative items-center space-x-2 text-sm text-gray-500"></div>
             </div>
 
             {/* Right Side - Navigation and Social */}
             <div className="flex flex-col items-start lg:items-end">
               {/* Navigation Links */}
               <nav className="flex flex-wrap gap-8 mb-8">
-                <a href="#" className="text-gray-600 hover:text-purple-600 transition-colors">
+                <button
+                  onClick={() => handleScroll("home")}
+                  className="text-gray-600 hover:text-purple-600 transition-colors"
+                >
                   Home
-                </a>
-                <a href="#" className="text-gray-600 hover:text-purple-600 transition-colors">
-                  About
-                </a>
-                <a href="#" className="text-gray-600 hover:text-purple-600 transition-colors">
-                  How it Works
-                </a>
-                <a href="#" className="text-gray-600 hover:text-purple-600 transition-colors">
-                  Services
-                </a>
+                </button>
+                <button
+                  onClick={() => handleScroll("why-choose-us")}
+                  className="text-gray-600 hover:text-purple-600 transition-colors"
+                >
+                  Why Us ?
+                </button>
+                <button
+                  onClick={() => handleScroll("products")}
+                  className="text-gray-600 hover:text-purple-600 transition-colors"
+                >
+                 Our Products
+                </button>
+                <button
+                  onClick={() => handleScroll("faq")}
+                  className="text-gray-600 hover:text-purple-600 transition-colors"
+                >
+                  FAQs
+                </button>
               </nav>
 
               {/* Social Media Icons */}
               <div className="flex space-x-4">
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="w-10 h-10 bg-gray-100 hover:bg-purple-100 rounded-full flex items-center justify-center transition-colors group"
                 >
                   <Instagram className="w-5 h-5 text-gray-600 group-hover:text-purple-600" />
                 </a>
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="w-10 h-10 bg-gray-100 hover:bg-purple-100 rounded-full flex items-center justify-center transition-colors group"
                 >
                   <Linkedin className="w-5 h-5 text-gray-600 group-hover:text-purple-600" />
                 </a>
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="w-10 h-10 bg-gray-100 hover:bg-purple-100 rounded-full flex items-center justify-center transition-colors group"
                 >
                   <Music className="w-5 h-5 text-gray-600 group-hover:text-purple-600" />
                 </a>
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="w-10 h-10 bg-gray-100 hover:bg-purple-100 rounded-full flex items-center justify-center transition-colors group"
                 >
                   <Globe className="w-5 h-5 text-gray-600 group-hover:text-purple-600" />

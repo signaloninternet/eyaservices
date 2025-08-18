@@ -60,7 +60,7 @@ export default function GetQuote() {
           </div>
 
           {/* Contact Information */}
-          <div className="space-y-4 sm:space-y-6">
+          <div className="space-y-4 font-creato sm:space-y-6">
             <div className="flex items-center gap-3 sm:gap-4">
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-emerald-500 rounded-full flex items-center justify-center">
                 <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
@@ -99,7 +99,7 @@ export default function GetQuote() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <div className="flex font-creato flex-col sm:flex-row gap-3 sm:gap-4">
             <Button className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-full">
               Call Now
             </Button>

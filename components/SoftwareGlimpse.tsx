@@ -125,7 +125,7 @@ export default function SoftwareGlimpse() {
   const dashOffset = circumference - (progress / 100) * circumference;
 
   return (
-    <section className="py-16">
+    <section className="py-16" id="products">
       <div className="max-w-[1400px] relative mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header with arrows */}
         <Image

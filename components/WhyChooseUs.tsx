@@ -21,7 +21,7 @@ import Image from "next/image";
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 mt-8 relative">
+    <section className="py-20 mt-8 relative" id="why-choose-us">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-left mb-16">

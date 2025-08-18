@@ -6,7 +6,10 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative max-w-[1600px] mt-[80px] mx-auto h-auto md:h-[650px] gap-6 flex flex-col-reverse md:flex-row items-stretch">
+    <section
+      className="relative max-w-[1600px] mt-[80px] mx-auto h-auto md:h-[650px] gap-6 flex flex-col-reverse md:flex-row items-stretch"
+      id="home"
+    >
       {/* Left Side Image */}
       <div className="relative w-full rounded-3xl min-h-[400px] md:ml-4 md:w-1/2 h-1/2 md:h-full">
         <Image
@@ -35,9 +38,12 @@ export default function HeroSection() {
 
         {/* Buttons */}
         <div className="relative font-creato mt-8 flex gap-4 z-10">
-          <Button className="rounded-xl px-4 md:px-6 py-6 gap-3 text-base font-medium shadow-lg bg-[#18a08e] text-white hover:bg-blue-600">
-            <PhoneCall className="w-4 h-4" /> Call Now
-          </Button>
+          <a href="tel:+17863436772">
+            <Button className="rounded-xl px-4 md:px-6 py-6 gap-3 text-base font-medium shadow-lg bg-[#18a08e] text-white hover:bg-blue-600">
+              <PhoneCall className="w-4 h-4" /> Call Now
+            </Button>
+          </a>
+
           <Button
             variant="outline"
             className="rounded-xl  gap-3 text-black px-4 md:px-6 py-6 text-base font-medium border-gray-600 hover:text-white hover:bg-gray-800"
