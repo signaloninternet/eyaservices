@@ -5,7 +5,7 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
-    question: "What products does Eya Services offer?",
+    question: "What products does Eya Supply offer?",
     answer:
       "We provide a wide range of essential health products, including emergency kits, adult pampers, Ensure milk, medical gloves, sanitizing wipes, underpads, and wheelchairs. All products are carefully sourced to ensure quality and reliability.",
   },
@@ -15,14 +15,14 @@ const faqs = [
       "Yes! All our products are available for same-day delivery, subject to availability and order time. Please place your order early in the day to ensure prompt delivery.",
   },
   {
-    question: "How can I place an order with Eya Services?",
+    question: "How can I place an order with Eya Supply?",
     answer:
       "You can place an order through our website or by contacting us directly via phone or email. Our team is always ready to assist you in selecting the right health products for your needs.",
   },
   {
     question: "Do you sell in bulk or only for individuals?",
     answer:
-      "We cater to both individual and bulk orders. Whether you need supplies for personal use, healthcare facilities, or businesses, Eya Services can accommodate your requirements.",
+      "We cater to both individual and bulk orders. Whether you need supplies for personal use, healthcare facilities, or businesses, Eya Supply can accommodate your requirements.",
   },
   {
     question: "What payment methods do you accept?",
@@ -35,9 +35,9 @@ const faqs = [
       "Absolutely. If you have specific requirements, our team will work with you to provide tailored health supply solutions that fit your needs.",
   },
   {
-    question: "How can I contact Eya Services?",
+    question: "How can I contact Eya Supply?",
     answer:
-      "You can reach us by phone at 786-343-6772 or by email at elbardezgarcia@gmail.com. Alternatively, you can fill out the contact form on our website, and we’ll get back to you within 24 hours.",
+      "You can reach us by phone at 786-343-6772 or by email at eyasupply@gmail.com. Alternatively, you can fill out the contact form on our website, and we’ll get back to you within 24 hours.",
   },
 ];
 

@@ -78,7 +78,7 @@ export default function GetQuote() {
               <div>
                 <p className="text-xs sm:text-sm text-gray-400">Email us</p>
                 <p className="text-lg sm:text-xl font-semibold">
-                  elbardezgarcia@gmail.com
+                 eyasupply@gmail.com
                 </p>
               </div>
             </div>

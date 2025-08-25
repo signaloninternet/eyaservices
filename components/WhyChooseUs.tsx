@@ -26,7 +26,7 @@ export default function WhyChooseUs() {
         {/* Section Title */}
         <div className="text-left mb-16">
           <h2 className="text-4xl md:text-5xl text-black mb-4">
-            Why Choose EYA Services?
+            Why Choose Eya Supply?
           </h2>
           <p className="text-gray-600 text-lg">
             We’re more than just a supplier – we’re your trusted partner in
