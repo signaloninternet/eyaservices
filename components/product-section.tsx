@@ -115,7 +115,7 @@ const products = [
 
 export function ProductsSection() {
   return (
-    <section className="py-16 relative px-4 text-center flex flex-center flex-col max-w-7xl mx-auto" id="products">
+    <section className="py-16 relative px-6 md:px-10 text-center flex flex-center flex-col max-w-[1600px] mx-auto" id="products">
       <Image
         src="/glimpsbg.svg"
         alt="Software Glimpse Background"
