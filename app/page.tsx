@@ -8,18 +8,17 @@ import BetaAccessSection from "@/components/BetaAccessSection";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import GetQuote from "@/components/GetQuote";
+import { ProductsSection } from "@/components/product-section";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white relative">
-
       <Header />
       <HeroSection />
       <WhyChooseUs />
-      <SoftwareGlimpse />
+      <ProductsSection />
       <FAQSection />
       <GetQuote />
-
       <Footer />
       <Image
         src="/bottombg.svg"
