@@ -93,12 +93,12 @@ export default function Header() {
               scrolled ? "opacity-0 w-0 overflow-hidden" : "opacity-100 w-auto"
             }`}
           >
-            <Link href="tel:+17863436772">
+            <Link href="/contact">
               {" "}
               {/* CHANGE number */}
               <Button className="bg-[#18a08e] hover:bg-purple-700 text-white px-6 py-4 rounded-xl transition-all duration-300">
                 <PhoneCallIcon className="inline w-4 h-4 mr-2" />
-                Call Now
+                Contact Us
               </Button>
             </Link>
           </div>
@@ -159,13 +159,13 @@ export default function Header() {
               Frequently Asked Questions
             </button>
             <a
-              href="tel:+17863436772"
+              href="/contact"
               onClick={() => setIsMenuOpen(false)} // ✅ closes menu after call
               className="w-full px-6"
             >
               <Button className="w-full bg-cyan-600 text-white px-6 py-3 rounded-full transition">
                 <PhoneCallIcon className="inline w-4 h-4 mr-2" />
-                Call Now
+                Contact Us
               </Button>
             </a>
           </div>

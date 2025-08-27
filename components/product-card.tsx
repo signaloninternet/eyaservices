@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Phone } from "lucide-react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 interface ProductCardProps {
@@ -27,23 +28,19 @@ export function ProductCard({
   category,
   image,
   features = [],
-  whatsappNumber = "+17863436772",
+  whatsappNumber = "+917021247474",
   productCode,
 }: ProductCardProps) {
-  const handleWhatsAppClick = () => {
-    const message = `Hi! I'm interested in ${title}${
-      productCode ? ` (Product Code: ${productCode})` : ""
-    }. Could you please provide more information about pricing and availability?`;
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${whatsappNumber.replace(
-      /[^0-9]/g,
-      ""
-    )}?text=${encodedMessage}`;
-    window.open(whatsappUrl, "_blank");
+  const router = useRouter();
+
+  const handleContactClick = () => {
+    const productInfo = `${title}${productCode ? ` (${productCode})` : ""}`;
+    const encodedProduct = encodeURIComponent(productInfo);
+    router.push(`/contact?product=${encodedProduct}`);
   };
 
   return (
-    <Card className="group relative overflow-hidden bg-gradient-to-br from-teal-50 to-teal-100/80 border-teal-200/50 rounded-3xl">
+    <Card className="group relative overflow-hidden bg-gradient-to-br from-teal-50 to-teal-100/80 border-teal-200/50  rounded-3xl">
       <CardHeader className="pb-6 pt-6">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-2">
@@ -114,10 +111,10 @@ export function ProductCard({
 
       <CardFooter>
         <Button
-          onClick={handleWhatsAppClick}
-          className="w-full z-40 bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white border-0 rounded-xl py-3 font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+          onClick={handleContactClick}
+          className="w-full bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white border-0 rounded-xl py-3 font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
         >
-          Order on WhatsApp
+          Get Quote
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </CardFooter>
@@ -126,12 +123,10 @@ export function ProductCard({
 }
 
 export function CallToActionCard() {
-  const handleCallNowClick = () => {
-    const message =
-      "Hi! I need assistance with medical supplies. Could you please help me with product information and pricing?";
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/17863436772?text=${encodedMessage}`;
-    window.open(whatsappUrl, "_blank");
+  const router = useRouter();
+
+  const handleContactClick = () => {
+    router.push("/contact");
   };
 
   return (
@@ -183,11 +178,11 @@ export function CallToActionCard() {
       </CardContent>
       <CardFooter>
         <Button
-          onClick={handleCallNowClick}
+          onClick={handleContactClick}
           className="w-full bg-white/20 z-40 hover:bg-white/30 text-white border-white/30 hover:border-white/50 rounded-xl py-3 font-medium transition-all duration-300 backdrop-blur-sm"
         >
           <Phone className="mr-2 h-4 w-4" />
-          Call Now
+          Contact Us
         </Button>
       </CardFooter>
     </Card>
