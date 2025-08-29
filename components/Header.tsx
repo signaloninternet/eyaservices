@@ -73,12 +73,12 @@ export default function Header() {
               Why Choose Us ?
             </button>
 
-            <button
-              onClick={() => handleScroll("products")}
+            <Link
+              href="/products"
               className="text-gray-600 hover:text-purple-600 transition-colors"
             >
               Our Products
-            </button>
+            </Link>
             <button
               onClick={() => handleScroll("faq")}
               className="text-gray-600 hover:text-purple-600 transition-colors"
@@ -146,12 +146,12 @@ export default function Header() {
             >
               Why Choose Us ?
             </button>
-            <button
-              onClick={() => handleScroll("products")}
+            <Link
+              href="/products"
               className="text-lg text-gray-600 hover:text-purple-600 transition"
             >
               Products
-            </button>
+            </Link>
             <button
               onClick={() => handleScroll("faq")}
               className="text-lg text-gray-600 hover:text-purple-600 transition"

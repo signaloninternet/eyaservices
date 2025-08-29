@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import GetQuote from "@/components/GetQuote";
 import { ProductsSection } from "@/components/product-section";
+import HomeProductsSectionsWrapper from "@/components/home-products-section-wrapper";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
       <Header />
       <HeroSection />
       <WhyChooseUs />
-      <ProductsSection />
+      <HomeProductsSectionsWrapper />
       <FAQSection />
       <GetQuote />
       <Footer />

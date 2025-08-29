@@ -40,7 +40,7 @@ export function ProductCard({
   };
 
   return (
-    <Card className="group relative overflow-hidden bg-gradient-to-br from-teal-50 to-teal-100/80 border-teal-200/50  rounded-3xl">
+    <Card className="group relative  overflow-hidden bg-gradient-to-br from-teal-50 to-teal-100/80 border-teal-200/50  rounded-3xl">
       <CardHeader className="pb-6 pt-6">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-2">
@@ -59,12 +59,12 @@ export function ProductCard({
       </CardHeader>
 
       <CardContent className="pb-6">
-        <div className="relative aspect-square bg-gradient-to-br from-teal-100 to-blue-50 rounded-2xl mb-6 flex items-center justify-center overflow-hidden">
+        <div className="relative w-full max-h-[250px] bg-gradient-to-br from-teal-100 to-blue-50 rounded-2xl mb-6 flex items-center justify-center overflow-hidden">
           {image ? (
             <img
               src={image || "/placeholder.svg"}
               alt={title}
-              className="w-full h-full object-contain p-4"
+              className="w-full h-full max-h-[250px] object-contain"
             />
           ) : (
             <div className="relative w-32 h-32">
@@ -149,13 +149,13 @@ export function CallToActionCard() {
       </CardHeader>
 
       <CardContent className="pb-6">
-        <div className="relative aspect-square bg-gradient-to-br from-teal-100 to-blue-50 rounded-2xl mb-6 flex items-center justify-center overflow-hidden">
+        <div className="relative w-full max-h-[250px] bg-gradient-to-br from-teal-100 to-blue-50 rounded-2xl mb-6 flex items-center justify-center overflow-hidden">
           <Image
             src="https://plus.unsplash.com/premium_photo-1664297701028-3e9919a2574f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="image"
             width={100}
             height={100}
-            className="w-full h-full object-cover p-4"
+            className="w-full h-full max-h-[250px] object-cover"
           />
         </div>
 

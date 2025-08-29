@@ -13,15 +13,9 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full blur-xl"></div>
-        <div className="absolute bottom-32 right-32 w-48 h-48 bg-white rounded-full blur-2xl"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-pink-300 rounded-full blur-lg"></div>
-      </div>
+    <footer className="relative bg-white overflow-hidden">
 
-      <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-32 md:py-16 relative z-10">
+      <div className="px-4 sm:px-6 lg:px-8 pt-16 pb-32 md:py-16 relative z-10">
         <Link
           href="https://oceanwaveweb.com/"
           target="_blank"
@@ -38,7 +32,7 @@ export default function Footer() {
         <Link
           href="https://oceanwaveweb.com/"
           target="_blank"
-          className="absolute md:hidden bottom-[6px] left-[24%] z-10"
+          className="absolute md:hidden bottom-20 left-[24%] z-10"
         >
           <Image
             src="/logolight.png"
@@ -93,7 +87,7 @@ export default function Footer() {
               </nav>
 
               {/* Social Media Icons */}
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 pb-16 md:pb-0">
                 <a
                   href="#"
                   className="w-10 h-10 bg-gray-100 hover:bg-purple-100 rounded-full flex items-center justify-center transition-colors group"
@@ -105,12 +99,6 @@ export default function Footer() {
                   className="w-10 h-10 bg-gray-100 hover:bg-purple-100 rounded-full flex items-center justify-center transition-colors group"
                 >
                   <Linkedin className="w-5 h-5 text-gray-600 group-hover:text-purple-600" />
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-gray-100 hover:bg-purple-100 rounded-full flex items-center justify-center transition-colors group"
-                >
-                  <Music className="w-5 h-5 text-gray-600 group-hover:text-purple-600" />
                 </a>
                 <a
                   href="#"
