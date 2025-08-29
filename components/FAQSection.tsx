@@ -10,11 +10,6 @@ const faqs = [
       "We provide a wide range of essential health products, including emergency kits, adult pampers, Ensure milk, medical gloves, sanitizing wipes, underpads, and wheelchairs. All products are carefully sourced to ensure quality and reliability.",
   },
   {
-    question: "Do you offer same-day delivery?",
-    answer:
-      "Yes! All our products are available for same-day delivery, subject to availability and order time. Please place your order early in the day to ensure prompt delivery.",
-  },
-  {
     question: "How can I place an order with Eya Supply?",
     answer:
       "You can place an order through our website or by contacting us directly via phone or email. Our team is always ready to assist you in selecting the right health products for your needs.",

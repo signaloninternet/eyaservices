@@ -1,8 +1,9 @@
 "use client";
-import { useMemo } from "react";
+import { useMemo, useRef } from "react";
 import products from "@/lib/products";
 import { ProductCard } from "@/components/product-card";
 import { cn } from "@/lib/utils";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type HomeProductsSectionProps = {
   title: string;
@@ -17,6 +18,8 @@ export default function HomeProductsSection({
   limit = 5,
   className,
 }: HomeProductsSectionProps) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
   const items = useMemo(
     () =>
       products
@@ -26,6 +29,15 @@ export default function HomeProductsSection({
   );
 
   const seeAllHref = `/products?category=${encodeURIComponent(category)}`;
+
+  const scroll = (dir: "left" | "right") => {
+    if (!scrollRef.current) return;
+    const amount = 340;
+    scrollRef.current.scrollBy({
+      left: dir === "left" ? -amount : amount,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <section
@@ -45,24 +57,44 @@ export default function HomeProductsSection({
         </a>
       </div>
 
-      <div
-        className="no-scrollbar flex gap-6 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none]"
-        style={{ scrollbarWidth: "none" }}
-      >
-        {/* hide scrollbar for webkit */}
-        <style>{`.no-scrollbar::-webkit-scrollbar{display:none}`}</style>
+      {/* Mobile: horizontal scroll with arrows */}
+      <div className="relative md:hidden">
+        {/* Scroll container */}
+        <div
+          ref={scrollRef}
+          className="no-scrollbar flex gap-6 overflow-x-auto pb-2 scroll-smooth"
+        >
+          {items.map((product, idx) => (
+            <div
+              key={idx}
+              className="w-[320px] flex-shrink-0"
+            >
+              <ProductCard {...product} />
+            </div>
+          ))}
+        </div>
 
-        {items.map((product, idx) => (
-          <div key={idx} className="min-w-[260px] max-w-[320px] md:max-w-[400px] flex-shrink-0">
-            <ProductCard
-              title={product.title}
-              description={product.description}
-              category={product.category}
-              image={product.image}
-              features={product.features}
-              productCode={product.productCode}
-            />
-          </div>
+        {/* Left / Right Arrows */}
+        <button
+          onClick={() => scroll("left")}
+          className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md"
+          aria-label="Scroll left"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+        <button
+          onClick={() => scroll("right")}
+          className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md"
+          aria-label="Scroll right"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
+      </div>
+
+      {/* Desktop: simple 3-column grid */}
+      <div className="hidden md:grid grid-cols-3 gap-6">
+        {items.slice(0, 3).map((product, idx) => (
+          <ProductCard key={idx} {...product} />
         ))}
       </div>
     </section>

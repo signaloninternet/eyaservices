@@ -56,7 +56,7 @@ export default function HeroSection() {
         <div className="relative mt-8 font-creato flex flex-col sm:flex-row gap-6 text-sm text-gray-400 z-10">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-            Same-day delivery available
+            Fast, Reliable and Smooth Delivery 
           </div>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>

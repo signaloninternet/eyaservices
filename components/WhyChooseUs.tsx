@@ -72,8 +72,7 @@ export default function WhyChooseUs() {
               Fast Delivery
             </h3>
             <p className="text-gray-100 text-sm leading-relaxed">
-              Same-day delivery available. Most orders delivered within 2–4
-              hours.
+               Fast, Reliable and Smooth Delivery 
             </p>
           </div>
 
