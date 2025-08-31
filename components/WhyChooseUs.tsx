@@ -72,7 +72,7 @@ export default function WhyChooseUs() {
               Fast Delivery
             </h3>
             <p className="text-gray-100 text-sm leading-relaxed">
-               Fast, Reliable and Smooth Delivery 
+              Fast, Reliable and Smooth Delivery
             </p>
           </div>
 
@@ -109,7 +109,7 @@ export default function WhyChooseUs() {
             </p>
             <div className="w-full h-1/2 mt-auto rounded-xl overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src="https://images.pexels.com/photos/6994276/pexels-photo-6994276.jpeg"
                 alt="Team collaboration"
                 className="w-full h-full object-cover"
               />
@@ -118,8 +118,8 @@ export default function WhyChooseUs() {
 
           {/* Card 5 */}
           <div
-            className="bg-[#18a08e] p-8 rounded-2xl shadow-sm flex flex-col   transition-all duration-300"
-            style={{ gridColumn: "span 3", gridRow: "span 1" }}
+            className="bg-[#18a08e] p-8 rounded-2xl shadow-sm flex flex-col transition-all duration-300 
+             col-span-2 row-span-2 md:col-span-3 md:row-span-1"
           >
             <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
               <MapPinCheck className="w-6 h-6 text-black" />
@@ -128,17 +128,18 @@ export default function WhyChooseUs() {
               Local Service
             </h3>
             <p className="text-gray-100 text-sm leading-relaxed">
-              Serving the entire metro area with personalized, caring service.
+              Serving the entire Miami Dade and Broward County with
+              personalized, caring service.
             </p>
           </div>
 
           {/* Card 6 */}
           <div
-            className="bg-[#18a08e] p-8 rounded-2xl shadow-sm flex flex-col   transition-all duration-300"
-            style={{ gridColumn: "span 3", gridRow: "span 1" }}
+            className="bg-[#18a08e] p-8 rounded-2xl shadow-sm flex flex-col transition-all duration-300 
+             col-span-2 row-span-2 md:col-span-3 md:row-span-1"
           >
             <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
-               <PhoneIncomingIcon className="w-6 h-6 text-black" />
+              <PhoneIncomingIcon className="w-6 h-6 text-black" />
             </div>
             <h3 className="text-xl font-semibold text-white mb-4">
               24/7 Emergency Support

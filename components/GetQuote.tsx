@@ -37,20 +37,13 @@ export default function GetQuote() {
 
   return (
     <div className="min-h-screen w-screen bg-[#225867] mx-auto rounded-3xl max-w-[1200px] relative flex items-center justify-center p-4 sm:p-6 lg:p-8">
-
       <div className="relative w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Left Side - Call to Action */}
         <div className="text-white space-y-6 sm:space-y-8 p-4 sm:p-6 lg:p-8">
           <div className="space-y-3 sm:space-y-4">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-              Ready to Order
-              Your{" "}
-              <span className="text-emerald-400">
-                Health
-                <br className="hidden sm:block" />
-                Essentials
-              </span>
-              ?
+              Ready to Order Your{" "}
+              <span className="text-emerald-400">Health Essentials</span>?
             </h1>
             <p className="text-base font-creato sm:text-lg text-gray-300 max-w-md">
               Get in touch with us today. We're here to help with all your
@@ -78,7 +71,7 @@ export default function GetQuote() {
               <div>
                 <p className="text-xs sm:text-sm text-gray-400">Email us</p>
                 <p className="text-lg sm:text-xl font-semibold">
-                 eyasupply@gmail.com
+                  eyasupply@gmail.com
                 </p>
               </div>
             </div>
@@ -105,9 +98,6 @@ export default function GetQuote() {
             </Button>
             <Button className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-full">
               Email Us
-            </Button>
-            <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-full">
-              Live Chat
             </Button>
           </div>
         </div>
@@ -244,7 +234,7 @@ export default function GetQuote() {
                     type="submit"
                     className="w-full bg-emerald-500 hover:bg-emerald-600 text-white py-3 rounded-lg font-semibold text-lg transition-all duration-200 hover:shadow-lg"
                   >
-                    ✈️ Send Message & Get Quote
+                    Send Message & Get Quote
                   </Button>
 
                   <p className="text-xs text-gray-500 text-center">

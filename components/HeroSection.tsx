@@ -13,7 +13,7 @@ export default function HeroSection() {
       {/* Left Side Image */}
       <div className="relative w-full rounded-3xl min-h-[400px] md:ml-4 md:w-1/2 h-1/2 md:h-full">
         <Image
-          src="https://images.pexels.com/photos/5214958/pexels-photo-5214958.jpeg" // replace with your healthcare/abstract medical illustration
+          src="https://images.pexels.com/photos/4481327/pexels-photo-4481327.jpeg" // replace with your healthcare/abstract medical illustration
           alt="Healthcare abstract design"
           fill
           className="object-cover object-top rounded-3xl"
@@ -26,14 +26,14 @@ export default function HeroSection() {
         <h1 className="relative text-3xl lg:text-5xl font-bold z-10">
           Your Health, Our Priority <br />
           <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-            Reliable Care, Seamless Delivery
+            Reliable Supply, Seamless Delivery
           </span>
         </h1>
 
         <p className="relative mt-6 text-lg font-creato text-gray-300 max-w-md z-10">
           We deliver essential medical supplies directly to your doorstep.
           Trusted by families, hospitals, and businesses for dependable service
-          when you need it most — faster, safer, and smarter.
+          when you need it most. Faster, safer, and smarter.
         </p>
 
         {/* Buttons */}
@@ -56,7 +56,7 @@ export default function HeroSection() {
         <div className="relative mt-8 font-creato flex flex-col sm:flex-row gap-6 text-sm text-gray-400 z-10">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-            Fast, Reliable and Smooth Delivery 
+            Fast, Reliable and Smooth Delivery
           </div>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>

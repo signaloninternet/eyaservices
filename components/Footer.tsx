@@ -42,12 +42,12 @@ export default function Footer() {
           />
         </Link>
 
-        <div className="bg-white/90 relative backdrop-blur-sm rounded-3xl p-8 md:p-12">
+        <div className="bg-white/90 relative backdrop-blur-sm rounded-3xl p-2 md:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left Side - Company Info */}
             <div>
               <Image src="/logo.png" alt="Logo" width={150} height={50} />
-              <p className="text-gray-600 mb-6 leading-relaxed max-w-md">
+              <p className="text-gray-600 ml-6 mb-6 leading-relaxed md:max-w-md">
                 Your trusted partner in health and wellness, delivering
                 essential medical supplies with care and reliability.
               </p>

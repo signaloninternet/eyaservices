@@ -203,16 +203,17 @@ function CategoryPill({
   return (
     <Link
       href={href}
-      className={
+      className={`h-9 px-4 rounded-full inline-flex items-center justify-center text-sm font-medium whitespace-nowrap ${
         active
-          ? "h-9 px-4 rounded-full bg-teal-600 text-white"
-          : "h-9 px-4 rounded-full bg-muted hover:bg-muted/80"
-      }
+          ? "bg-teal-600 text-white"
+          : "bg-muted hover:bg-muted/80 text-gray-700"
+      }`}
     >
       {label}
     </Link>
   );
 }
+
 
 function EmptyState({ clearHref }: { clearHref: string }) {
   return (

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter, usePathname } from "next/navigation"; // ✅ import router helpers
 import { Button } from "@/components/ui/button";
 import { Menu, PhoneCallIcon, X } from "lucide-react";
 import Image from "next/image";
@@ -10,25 +11,30 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const router = useRouter();
+  const pathname = usePathname();
 
-  // smooth scroll handler
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  // ✅ universal smooth scroll handler
   const handleScroll = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false); // close mobile menu after clicking
+    if (pathname !== "/") {
+      // If NOT on homepage, go to homepage with hash
+      router.push(`/#${id}`);
+    } else {
+      // If already on homepage, just scroll
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+        setIsMenuOpen(false);
+      }
     }
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
@@ -54,7 +60,7 @@ export default function Header() {
 
           {/* Desktop Nav */}
           <nav
-            className={`hidden md:flex h-full w-content border-[2px] rounded-2xl px-10 items-center space-x-8 transition-all duration-300 ${
+            className={`hidden md:flex h-full w-content border-[2px] rounded-2xl px-10 items-center space-x-16 transition-all duration-300 ${
               scrolled
                 ? "bg-white border-gray-200 shadow-md"
                 : "bg-white/60 border-white"
@@ -94,8 +100,6 @@ export default function Header() {
             }`}
           >
             <Link href="/contact">
-              {" "}
-              {/* CHANGE number */}
               <Button className="bg-[#18a08e] hover:bg-purple-700 text-white px-6 py-4 rounded-xl transition-all duration-300">
                 <PhoneCallIcon className="inline w-4 h-4 mr-2" />
                 Contact Us
@@ -113,20 +117,14 @@ export default function Header() {
                   : "text-gray-600 hover:text-purple-600 hover:bg-gray-100"
               }`}
             >
-              {isMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-white flex flex-col items-center justify-center space-y-6 shadow-lg">
-            {/* X (Close) Button */}
             <button
               onClick={() => setIsMenuOpen(false)}
               className="absolute top-6 right-6 text-gray-700 hover:text-purple-600 transition"
@@ -160,7 +158,7 @@ export default function Header() {
             </button>
             <a
               href="/contact"
-              onClick={() => setIsMenuOpen(false)} // ✅ closes menu after call
+              onClick={() => setIsMenuOpen(false)}
               className="w-full px-6"
             >
               <Button className="w-full bg-cyan-600 text-white px-6 py-3 rounded-full transition">
