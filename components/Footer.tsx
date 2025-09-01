@@ -1,68 +1,82 @@
 "use client";
 
-import { Instagram, Linkedin, Music, Globe } from "lucide-react";
+import { Instagram, Linkedin, Globe } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
 
 export default function Footer() {
+  const router = useRouter();
+  const pathname = usePathname();
+
   const handleScroll = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+    if (pathname !== "/") {
+      router.push(`/#${id}`);
+    } else {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
   return (
-    <footer className="relative bg-white overflow-hidden">
-
-      <div className="px-4 sm:px-6 lg:px-8 pt-16 pb-32 md:py-16 relative z-10">
+    <footer className="relative z-40  overflow-hidden">
+      <div className="px-6 z-40 lg:px-12 pt-16 pb-32 md:py-16 relative z-10">
+        {/* Desktop Logo */}
         <Link
           href="https://oceanwaveweb.com/"
           target="_blank"
-          className="absolute hidden md:block bottom-[4px] left-[40%] z-10"
+          className="absolute hidden md:block bottom-2 right-0 -translate-x-1/2 z-10"
         >
           <Image
             src="/logolight.png"
             alt="Heart Icon"
             width={200}
             height={200}
+            className="opacity-80 hover:opacity-100 transition"
           />
         </Link>
 
+        {/* Mobile Logo */}
         <Link
           href="https://oceanwaveweb.com/"
           target="_blank"
-          className="absolute md:hidden bottom-20 left-[24%] z-10"
+          className="absolute md:hidden bottom-20 left-1/2 -translate-x-1/2 z-10"
         >
           <Image
             src="/logolight.png"
             alt="Heart Icon"
             width={170}
             height={170}
+            className="opacity-80 hover:opacity-100 transition"
           />
         </Link>
 
-        <div className="bg-white/90 relative backdrop-blur-sm rounded-3xl p-2 md:p-12">
+        <div className="bg-white relative backdrop-blur-sm rounded-3xl shadow-md p-6 md:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            {/* Left Side - Company Info */}
+            {/* Left Side */}
             <div>
-              <Image src="/logo.png" alt="Logo" width={150} height={50} />
-              <p className="text-gray-600 ml-6 mb-6 leading-relaxed md:max-w-md">
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={150}
+                height={50}
+                className="opacity-90"
+              />
+              <p className="text-gray-600 pt-8 mb-6 leading-relaxed md:max-w-md">
                 Your trusted partner in health and wellness, delivering
                 essential medical supplies with care and reliability.
               </p>
-
-              {/* Made with love section */}
-              <div className="flex relative items-center space-x-2 text-sm text-gray-500"></div>
             </div>
 
-            {/* Right Side - Navigation and Social */}
+            {/* Right Side */}
             <div className="flex flex-col items-start lg:items-end">
-              {/* Navigation Links */}
-              <nav className="flex flex-wrap gap-8 mb-8">
+              {/* Nav */}
+              <nav className="flex flex-wrap gap-6 md:gap-8 mb-8">
                 <button
                   onClick={() => handleScroll("home")}
-                  className="text-gray-600 hover:text-purple-600 transition-colors"
+                  className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
                 >
                   Home
                 </button>
@@ -70,23 +84,23 @@ export default function Footer() {
                   onClick={() => handleScroll("why-choose-us")}
                   className="text-gray-600 hover:text-purple-600 transition-colors"
                 >
-                  Why Us ?
+                  Why Choose Us?
                 </button>
-                <button
-                  onClick={() => handleScroll("products")}
+                <Link
+                  href="/products"
                   className="text-gray-600 hover:text-purple-600 transition-colors"
                 >
-                 Our Products
-                </button>
-                <button
-                  onClick={() => handleScroll("faq")}
+                  Our Products
+                </Link>
+                <Link
+                  href="/contact"
                   className="text-gray-600 hover:text-purple-600 transition-colors"
                 >
-                  FAQs
-                </button>
+                 Contact Us
+                </Link>
               </nav>
 
-              {/* Social Media Icons */}
+              {/* Social */}
               <div className="flex space-x-4 pb-16 md:pb-0">
                 <a
                   href="#"

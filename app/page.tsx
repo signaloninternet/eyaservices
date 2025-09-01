@@ -26,7 +26,7 @@ export default function Home() {
         alt="Hero Background"
         width={100}
         height={100}
-        className="absolute bottom-0 left-0 right-0 w-full h-auto object-cover"
+        className="absolute bottom-0 z-10 left-0 right-0 w-full h-auto object-cover"
       />
     </main>
   );

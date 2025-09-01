@@ -60,7 +60,7 @@ export default function Header() {
 
           {/* Desktop Nav */}
           <nav
-            className={`hidden md:flex h-full w-content border-[2px] rounded-2xl px-10 items-center space-x-16 transition-all duration-300 ${
+            className={`hidden md:flex h-full w-content border-[2px] rounded-2xl px-10 items-center space-x-24 transition-all duration-300 ${
               scrolled
                 ? "bg-white border-gray-200 shadow-md"
                 : "bg-white/60 border-white"
