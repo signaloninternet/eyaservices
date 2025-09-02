@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <section
-      className="relative max-w-[1600px] mt-[80px] mx-auto h-auto md:h-[650px] gap-6 flex flex-col-reverse md:flex-row items-stretch"
+      className="relative max-w-[1600px] mt-[100px] mx-auto h-auto md:h-[650px] gap-6 flex flex-col-reverse md:flex-row items-stretch"
       id="home"
     >
       {/* Left Side Image */}
@@ -16,7 +16,7 @@ export default function HeroSection() {
           src="https://images.pexels.com/photos/4481327/pexels-photo-4481327.jpeg" // replace with your healthcare/abstract medical illustration
           alt="Healthcare abstract design"
           fill
-          className="object-cover object-top rounded-3xl"
+          className="object-cover object-center rounded-3xl"
           priority
         />
       </div>

@@ -64,7 +64,7 @@ export default function Footer() {
                 height={50}
                 className="opacity-90"
               />
-              <p className="text-gray-600 pt-8 mb-6 leading-relaxed md:max-w-md">
+              <p className="text-gray-600 pt-4 mb-6 leading-relaxed md:max-w-md">
                 Your trusted partner in health and wellness, delivering
                 essential medical supplies with care and reliability.
               </p>
